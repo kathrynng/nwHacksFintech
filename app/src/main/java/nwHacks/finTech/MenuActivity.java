@@ -1,5 +1,7 @@
 package nwHacks.finTech;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,14 +14,22 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import org.w3c.dom.Text;
 
 public class MenuActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
+    //FOR STOCK DETAILS
+    static TableRow tblRow;
 
 
     @Override
@@ -45,22 +55,41 @@ public class MenuActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.menuicon);
 
-//        NavigationView navigationView = findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(
-//                new NavigationView.OnNavigationItemSelectedListener() {
-//                    @Override
-//                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-//                        // set item as selected to persist highlight
-//                        menuItem.setChecked(true);
-//                        // close drawer when item is tapped
-//                        mDrawerLayout.closeDrawers();
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        // set item as selected to persist highlight
+                        menuItem.setChecked(true);
+                        // close drawer when item is tapped
+                        mDrawerLayout.closeDrawers();
+
+                        // Add code here to update the UI based on the item selected
+                        // For example, swap UI fragments here
+
+                        return true;
+                    }
+                });
+
+
+//        TableLayout tblStocks = findViewById(R.id.tableLayout);
+//        tblRow = (TableRow) tblStocks.getChildAt();
+//        switch(){
 //
-//                        // Add code here to update the UI based on the item selected
-//                        // For example, swap UI fragments here
-//
-//                        return true;
-//                    }
-//                });
+//        }
+//        for(int i = 1; i < tblStocks.getChildCount(); i++){
+//            tblRow = (TableRow) tblStocks.getChildAt(i);
+//            tblRow.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    tblRow.setBackgroundColor(Color.rgb(150,150,150));
+//                    TextView stockName = findViewById(R.id.stockName);
+//                    TextView textViewName = (TextView) tblRow.getChildAt(0);
+//                    stockName.setText(textViewName.getText());
+//                }
+//            });
+//        }
 
     }
 
@@ -72,6 +101,19 @@ public class MenuActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public boolean changePredict(Double getPredict){
+        if(getPredict > )
+            return true;
+    }
+
+    public void onClick(View view){
+        tblRow = (TableRow) view;
+        tblRow.setBackgroundColor(Color.rgb(150,150,150));
+        TextView stockName = findViewById(R.id.stockName);
+        TextView textViewName = (TextView) tblRow.getChildAt(0);
+        stockName.setText(textViewName.getText());
     }
 
 }
