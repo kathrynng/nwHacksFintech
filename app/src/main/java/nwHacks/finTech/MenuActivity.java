@@ -103,10 +103,6 @@ public class MenuActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public boolean changePredict(Double getPredict){
-        if(getPredict > )
-            return true;
-    }
 
     public void onClick(View view){
         tblRow = (TableRow) view;
