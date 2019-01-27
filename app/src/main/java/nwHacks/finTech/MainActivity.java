@@ -1,9 +1,13 @@
 package nwHacks.finTech;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -20,9 +24,18 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("mmmmmmmmmmmmcofe");
         myRef.setValue("Hello, World!");
 
-        ImageView imageViewLogo = findViewById(R.id.imageViewLogo);
-        Animation animSlide = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
-        imageViewLogo.startAnimation(animSlide);
+        Button buttonEnter = findViewById(R.id.buttonEnter);
+        buttonEnter.setOnClickListener(new View.onClickListener());
 
+
+//        ImageView imageViewLogo = findViewById(R.id.imageViewLogo);
+//        Animation animSlide = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
+//        imageViewLogo.startAnimation(animSlide);
+
+    }
+
+    public void menuActivity(View v){
+        Intent intentMenu = new Intent(this, MenuActivity.class);
+        startActivity(intentMenu);
     }
 }

@@ -34,5 +34,6 @@
         android:text="ENTER"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        android:onClick="menuActivity"/>
 </android.support.constraint.ConstraintLayout>
