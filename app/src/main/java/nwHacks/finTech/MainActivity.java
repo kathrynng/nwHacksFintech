@@ -25,17 +25,19 @@ public class MainActivity extends AppCompatActivity {
         myRef.setValue("Hello, World!");
 
         Button buttonEnter = findViewById(R.id.buttonEnter);
-        buttonEnter.setOnClickListener(new View.onClickListener());
+        buttonEnter.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intentMenu = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(intentMenu);
+            }
+        });
 
 
 //        ImageView imageViewLogo = findViewById(R.id.imageViewLogo);
 //        Animation animSlide = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
 //        imageViewLogo.startAnimation(animSlide);
 
-    }
-
-    public void menuActivity(View v){
-        Intent intentMenu = new Intent(this, MenuActivity.class);
-        startActivity(intentMenu);
     }
 }
