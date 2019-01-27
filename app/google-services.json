@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "766740038880-so6osj08ri7q5cdj084pjmbhu87ec1cr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nwHacks.finTech",
+            "certificate_hash": "428d7e2530b6eda9f681749de1b30d17cdfce8a3"
+          }
+        },
+        {
           "client_id": "766740038880-buu0hiaos6455mr36iloahu62u3uvftt.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766740038880-buu0hiaos6455mr36iloahu62u3uvftt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
