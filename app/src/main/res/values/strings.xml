@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">nwHacks</string>
     <string name="action_menu">Menu</string>
+    <string-array name="menuItems">
+        <item value="0">No.1</item>
+    </string-array>
 </resources>
