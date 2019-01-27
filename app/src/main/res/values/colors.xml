@@ -3,4 +3,6 @@
     <color name="colorPrimary">#000</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#FFFFFF</color>
+    <color name="colorGoodStock">#4CAF50</color>
+    <color name="colorBadStock">#A30000</color>
 </resources>

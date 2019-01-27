@@ -2,8 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/menuicon"
-            android:title="OK" />
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profileicon"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_myStocks"
+            android:icon="@drawable/stocks"
+            android:title="My Stocks" />
+        <item
+            android:id="@+id/nav_previousPredictions"
+            android:icon="@drawable/prevp"
+            android:title="Previous Predictions" />
+        <item
+            android:id="@+id/nav_newPredictions"
+            android:icon="@drawable/newp"
+            android:title="New Predictions" />
     </group>
 </menu>
