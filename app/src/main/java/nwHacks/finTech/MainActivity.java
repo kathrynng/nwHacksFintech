@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("mmmmmmmmmmmmcofe");
-        myRef.setValue("Hello, World!");
+        myRef.setValue("Hello, World!");//how do i update
 
         Button buttonEnter = findViewById(R.id.buttonEnter);
         buttonEnter.setOnClickListener(new View.OnClickListener(){
